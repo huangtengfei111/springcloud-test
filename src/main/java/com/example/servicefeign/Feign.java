@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 /**
  *  Feign的负载均衡
  */
-@FeignClient(value = "service-hi")
+@FeignClient(value = "service-hi", fallback = SchedualServiceHiHystric.class)
 @RestController
 public interface Feign {
 
