@@ -11,5 +11,6 @@ import org.springframework.web.bind.annotation.*;
 public interface Feign {
 
     @RequestMapping(value = "/hi",method = RequestMethod.GET)
+
     String sayHiFromClientOne(@RequestParam(value = "name") String name);
 }
